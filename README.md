@@ -468,7 +468,7 @@ XUI_BIN_FOLDER="bin" XUI_DB_FOLDER="/etc/x-ui" go build main.go
 
 </details>
 
-## How to modify this Project
+## How to modify this Project (Development)
 ### create a new page
 1. add a html
    /3x-ui/web/html/xui/demo.html
