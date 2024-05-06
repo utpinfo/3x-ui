@@ -468,6 +468,33 @@ XUI_BIN_FOLDER="bin" XUI_DB_FOLDER="/etc/x-ui" go build main.go
 
 </details>
 
+## How to modify this Project
+### create a new page
+1. add a html
+   /3x-ui/web/html/xui/demo.html
+2. add route ( Associate routing with html)
+   /3x-ui/web/controller/xui.go
+3. add menu
+   /3x-ui/web/html/xui/common_sider.html
+4. add API
+   /3x-ui/web/controller/demo.go
+5. language
+   /3x-ui/web/translation/translate.zh_Hans.toml
+
+### Build
+	cd /3x-ui/
+	build -o x-ui main.go
+
+### Compressed archive (x-ui-linux-amd64.tar.gz)
+	x-ui/x-ui
+	x-ui/x-ui.service
+	x-ui/x-ui.sh
+	x-ui/bin
+
+### Release(github)
+
+
+
 ## Preview
 
 ![1](./media/1.png)

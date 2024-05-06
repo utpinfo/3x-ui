@@ -8,6 +8,7 @@ type XUIController struct {
 	BaseController
 
 	inboundController     *InboundController
+	demoController        *DemoController
 	settingController     *SettingController
 	xraySettingController *XraySettingController
 }
@@ -24,6 +25,7 @@ func (a *XUIController) initRouter(g *gin.RouterGroup) {
 
 	g.GET("/", a.index)
 	g.GET("/inbounds", a.inbounds)
+	g.GET("/demo", a.demo) // 2.引入路由
 	g.GET("/settings", a.settings)
 	g.GET("/xray", a.xraySettings)
 
@@ -38,6 +40,11 @@ func (a *XUIController) index(c *gin.Context) {
 
 func (a *XUIController) inbounds(c *gin.Context) {
 	html(c, "inbounds.html", "pages.inbounds.title", nil)
+}
+
+// 1.新建頁面關聯
+func (a *XUIController) demo(c *gin.Context) {
+	html(c, "demo.html", "pages.demo.title", nil)
 }
 
 func (a *XUIController) settings(c *gin.Context) {
